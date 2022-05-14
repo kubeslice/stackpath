@@ -1,4 +1,4 @@
-module github.com/kraney/stackpath
+module github.com/wmarchesi123/stackpath-go
 
 go 1.13
 
