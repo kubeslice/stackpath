@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	user "github.com/kraney/stackpath/pkg/accounts_and_users"
+	user "github.com/wmarchesi123/stackpath-go/pkg/accounts_and_users"
 	"golang.org/x/oauth2"
 )
 
