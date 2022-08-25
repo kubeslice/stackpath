@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	user "github.com/kraney/stackpath/pkg/accounts_and_users"
+	user "github.com/kubeslice/stackpath/pkg/accounts_and_users"
 	"golang.org/x/oauth2"
 )
 
@@ -44,6 +44,11 @@ func NewTokenSource(clientid string, clientsecret string, options ...Option) oau
 
 // Token returns a token
 func (sps *TokenSource) Token() (*oauth2.Token, error) {
+
+	if *sps.req.ClientId == "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" && *sps.req.ClientSecret == "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" {
+		return nil, nil
+	}
+
 	usercfg := user.NewConfiguration()
 	usercfg.HTTPClient = sps.client
 	userclient := user.NewAPIClient(usercfg)
