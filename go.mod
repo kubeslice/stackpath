@@ -1,4 +1,4 @@
-module github.com/kubeslice/stackpath-go
+module github.com/kubeslice/stackpath
 
 go 1.13
 
